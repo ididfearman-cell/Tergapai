@@ -20,10 +20,10 @@ jobs:
           java-version: '17'
 
 
+
       - name: Siapkan Android SDK
-        run: |
-          echo "ANDROID_HOME=$ANDROID_HOME"
-          sdkmanager --version
+        uses: android-actions/setup-android@v3
+        
           
 
       - name: Build APK

@@ -19,8 +19,12 @@ jobs:
           distribution: temurin
           java-version: '17'
 
+
       - name: Siapkan Android SDK
-        uses: android-actions/setup-android@v3
+        run: |
+          echo "ANDROID_HOME=$ANDROID_HOME"
+          sdkmanager --version
+          
 
       - name: Build APK
         run: |
